@@ -19,106 +19,99 @@ body {
   padding: 1.75rem 1rem;
   background-color: var(--almost-white);
 }
-  
-body.escurecer::before {
-    content: "";
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    background-color: rgb(0, 0, 26, 0.5);
-    top: 0;
-    left: 0;
-   
+
+body.menu-open::before {
+  content: "";
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 26, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 998;
+  cursor: pointer;
 }
 
- header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-    max-width: 1110px;
-    margin-inline: auto;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  max-width: 1110px;
+  margin-inline: auto;
 }
 
 header button {
-    border: none;
-    background: none;
-    width: fit-content;
+  border: none;
+  background: none;
+  width: fit-content;
+  cursor: pointer;
 }
- 
+
 header nav.mobile {
-    position: fixed;
-    background-color: var(--almost-white);
-    right: -16rem;
-    top: 0;
-    height: 100vh;
-    width: 16rem;
-    z-index: 999;
-    display: none; /* escondido por padrão */
-    flex-direction: column;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    gap: 1.5rem;
-    transition: 0.7s;
+  position: fixed;
+  background-color:var(--almost-white);
+  right: -16rem;
+  top: 0;
+  height: 100vh;
+  width: 16rem;
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  gap: 1.5rem;
+  transition: 0.7s;
 }
 
 header nav.mobile.abrir {
-    right: 0;
-    display: flex; /* mostra ao abrir */
+  right: 0;
+  display: flex;
 }
 
-body.escurecer::before {
-    content: "";
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 26, 0.5);
-    top: 0;
-    left: 0;
-    z-index: 998;
-    cursor: pointer;
+nav.mobile a {
+  text-decoration: none;
+  color: #00001A;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
 }
 
-.header-mobile nav a {
-    text-decoration: none;
-    color: var(--dark-blue);
-    font-size: 1.125rem;
-    line-height: 1.5rem; /* corrigido */
+
+header .desktop {
+  display: none;
 }
 
 main {
-    max-width:1110px;
-    margin-inline: auto;
+  max-width: 1110px;
+  margin-inline: auto;
 }
 
-
 .primeira-secao {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 
 .primeira-secao img {
-    width: 100%;
-    margin-bottom: 1.5rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 .primeira-secao h1 {
-    font-size: 2.5rem;
-    line-height: 100%;
-    color: var(--dark-blue);
-    margin-bottom: 1rem;
+  font-size: 2.5rem;
+  line-height: 100%;
+  color: var(--dark-blue);
+  margin-bottom: 1rem;
 }
 
 .primeira-secao p {
-    font-size: 0.9375rem;
-    line-height: 1.625rem;
-    color: var(--gunmetal);
-    margin-bottom: 1.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.625rem;
+  color: var(--gunmetal);
+  margin-bottom: 1.5rem;
 }
 
 .primeira-secao button {
   width: 200px;
   height: 50px;
-
   padding: 0.75rem 2rem;
   background-color: var(--vermillion);
   border: none;
@@ -128,71 +121,76 @@ main {
   font-size: 0.875rem;
   letter-spacing: 0.275rem;
   line-height: 1.5rem;
+  margin-left: auto;
+  display: block;
 }
 
 .segunda-secao {
-    background-color: var(--dark-blue);
-    margin-bottom: 4rem;
-    padding: 1.5rem 1.1rem;
+  background-color: var(--dark-blue);
+  margin-bottom: 4rem;
+  padding: 1.5rem 1.1rem;
 }
 
-  .margin-border-padding {
-    border-bottom: 1px solid var(--gunmetal);
-    margin-bottom: 1.75rem;
-    padding-bottom: 1.75rem;
-  }
+.margin-border-padding {
+  border-bottom: 1px solid var(--gunmetal);
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.75rem;
+}
 
 .segunda-secao h2 {
-    color: var(--yellow);
-    font-size: 2rem;
-    line-height: 100%;
-    margin-bottom: 2.2rem;
+  color: var(--yellow);
+  font-size: 2rem;
+  line-height: 100%;
+  margin-bottom: 2.2rem;
 }
 
-
 .segunda-secao h3 {
-    color: var(--almost-white);
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-    font-weight: 800;
-    margin-bottom: 0.5rem;
+  color: var(--almost-white);
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
 }
 
 .segunda-secao p {
-    color: var(--silver);
-    font-size: 0.9375rem;
-    line-height: 1.625rem;
+  color: var(--silver);
+  font-size: 0.9375rem;
+  line-height: 1.625rem;
 }
 
 .terceira-secao > div {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .terceira-secao img {
-    max-width: 6.25rem;
+  max-width: 6.25rem;
 }
 
 .terceira-secao strong {
-    color: var(--silver);
-    font-size: 2rem;
-    line-height: 100%;
+  color: var(--silver);
+  font-size: 2rem;
+  line-height: 100%;
 }
 
 .terceira-secao h2 {
-    color: var(--dark-blue);
-    font-size: 1.125rem;
-    font-weight: 800;
-    line-height: 1.5rem;
-    margin-block: 0.6rem;
+  color: var(--dark-blue);
+  font-size: 1.125rem;
+  font-weight: 800;
+  line-height: 1.5rem;
+  margin-block: 0.6rem;
+}
+
+.terceira-secao a {
+  text-decoration: none;
 }
 
 .terceira-secao p {
-    font-size: 0.9375rem;
-    line-height: 1.625rem;
-    color: var(--gunmetal);
+  font-size: 0.9375rem;
+  line-height: 1.625rem;
+  color: var(--gunmetal);
 }
 
 @media (min-width: 1110px) {
@@ -205,22 +203,20 @@ main {
   .primeira-secao {
     grid-column: 1 / 3;
     display: grid;
-    grid-template-columns:
-    
+    grid-template-columns: 1fr 1fr;
   }
 
- .primeira-secao picture {
-     grid-column:1 / 3;
-     
+  .primeira-secao picture {
+    grid-column: 1 / 3;
   }
 
-  .primeira-secao img {
-
-    
-  }
-
-  primeira-secao h1 {
+  .primeira-secao h1 {
     font-size: 3.5rem;
+  }
+
+  .primeira-secao button:hover {
+    background-color: var(--dark-blue);
+    cursor: pointer;
   }
 
   .segunda-secao h2 {
@@ -236,10 +232,28 @@ main {
     gap: 2.5rem;
   }
 }
+
 header .desktop a {
   font-size: 0.9375rem;
   line-height: 1.625rem;
   text-decoration: none;
   color: var(--gunmetal);
+}
+
+header .desktop a:hover {
+  color: var(--vermillion);
+}
+
+.terceira-secao {
+  display: flex;
+  grid-column: 1 / 4;
+}
+
+.terceira-secao h2:hover {
+  color: var(--vermillion);
+}
+
+header nav.mobile button {
+  margin-left: auto;
 }
 
