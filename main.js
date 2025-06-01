@@ -1,7 +1,7 @@
-const botaoAbrir = document.querySelector(".header-mobile > button");
-const botaoFechar = document.querySelector(".header-mobile nav button");
+const botaoAbrir = document.querySelector("header > button");
+const botaoFechar = document.querySelector("nav.mobile > button");
 const body = document.querySelector("body");
-const nav = document.querySelector(".header-mobile nav");
+const nav = document.querySelector("nav.mobile");
 
 if (botaoAbrir && botaoFechar && nav) {
   botaoAbrir.addEventListener('click', abrirMenu);
@@ -17,7 +17,6 @@ if (botaoAbrir && botaoFechar && nav) {
     nav.classList.remove("abrir");
   }
 
-  // Fecha o menu ao clicar no overlay escurecido
   document.body.addEventListener("click", (e) => {
     if (e.target === document.body && body.classList.contains("escurecer")) {
       fecharMenu();

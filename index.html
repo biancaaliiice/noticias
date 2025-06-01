@@ -11,13 +11,14 @@
     <title>W. Noticias</title>
 </head>
 <body class="escurecer" >
-    <header class="header-mobile">
+    <header >
         <img src="./noticias_base/assets/images/logo.svg" alt="logo do site de noticias W.">
        <button>
         <img src="./noticias_base/assets/images/icon-menu.svg" alt="icone do menu hamburguer">
     </button> 
 
-    <nav class="abrir">
+    
+    <nav class="mobile">
 
         <button>
             <img src="./noticias_base/assets/images/icon-menu-close.svg" alt="icone de X para fechar menu">
@@ -29,17 +30,33 @@
         <a href="#">Trending</a>
         <a href="#">Categorias</a>
     </nav>
+
+    <nav class="desktop">
+
+
+        <a href="#">Home</a>
+        <a href="#">Novo</a>
+        <a href="#">Popular</a>
+        <a href="#">Trending</a>
+        <a href="#">Categorias</a>
+    </nav>
+
     </header>
 
+    
     <main>
 
 
 
         <section class="primeira-secao">
 
-<img src="./noticias_base/assets/images/image-web-3-mobile.jpg" alt="ícone de puzzle colorido">
+            <picture>
+   <source media="(700px)" srcset="./noticias_base/assets/images/image-web-3-mobile.jpg">
+                <img src="./noticias_base/assets/images/image-web-3-desktop.jpg" alt="ícone de puzzle colorido">
+            </picture>
+
 <h1>0 futuro brilhante da Web 3.0?</h1>
-    <p>nos mergulhamos na próxima evolução da web que afirma devolver o poder das plataformas para as mãos das pesssoas. Mas sera que ela realmente esta cumprindo sua promessa?</p>
+<p>nos mergulhamos na próxima evolução da web que afirma devolver o poder das plataformas para as mãos das pesssoas. Mas sera que ela realmente esta cumprindo sua promessa?</p>
 
 </p>
     <button>Ler Mais</button>
