@@ -20,7 +20,7 @@ body {
   background-color: var(--almost-white);
 }
   
-body.menu-open::before {
+body.escurecer::before {
     content: "";
     position: fixed;
     height: 100vh;
@@ -47,32 +47,43 @@ body.menu-open::before {
 .header-mobile nav {
     position: fixed;
     background-color: var(--almost-white);
-    right: 0;
+    right: -16rem;
     top: 0;
     height: 100vh;
     width: 16rem;
     z-index: 999;
-
-    display: flex;
+    display: none; /* escondido por padrão */
     flex-direction: column;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     gap: 1.5rem;
-
+    transition: 0.7s;
 }
- 
-  .header-mobile nav button {
-     align-self: flex-end;
-    margin-left: 4rem;
-  }
 
-    .header-mobile nav a {
+.header-mobile nav.abrir {
+    right: 0;
+    display: flex; /* mostra ao abrir */
+}
 
-        text-decoration: none;
-        color: var(--dark-blue);
-        font-size: 1.125rem;
-        line-height: 1.5re,;
-    }
+body.escurecer::before {
+    content: "";
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 26, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 998;
+    cursor: pointer;
+}
+
+.header-mobile nav a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-size: 1.125rem;
+    line-height: 1.5rem; /* corrigido */
+}
+
 
 .primeira-secao {
     margin-bottom: 4rem;
